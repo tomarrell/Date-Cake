@@ -1,2 +1,4 @@
 # date-cake
-A natural-language date calculator
+A natural-language date calculator.
+
+Licensed under MIT.
