@@ -1,28 +1,12 @@
-# React + Express Skeleton
-A simple React and Express skeleton to get your application up and running quickly.
+# DateCake
+A natural-language date calculator.
 
-## Installation and Setup
-Clone the repository locally.
-```
-git clone https://github.com/tomarrell/React-Express-Skeleton.git
-```
+## Usage
 
-Then install dependencies. It is recommended you use Yarn, however NPM will work as well.
-```
-yarn
-```
-or
-```
-npm i
-```
+Useful commands:
+- ````add 20 days to March 2nd```` (will default to current year if none specified)
+- ````what is 2m 23d 5h subtracted from 18/08/2017````
+- ````what day will it be 20d from Jan 5````
+- ````what day was that````
 
-## Starting the application
-To run the backend service:
-```
-yarn backend
-```
-and to run the React-Redux frontend
-```
-yarn start
-```
-
+Licensed under MIT.
