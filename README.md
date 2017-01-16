@@ -1,10 +1,7 @@
 <h1 align="center">
   <br>
   <img src="http://i.imgur.com/6BvriRy.png" alt="Date Cake" width="200"></a>
-  <br>
-  Date Cake
-  <br>
-  <br>
+  <br>Date Cake<br><br>
 </h1>
 
 A natural-language date calculator.
