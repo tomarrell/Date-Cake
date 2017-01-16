@@ -1,6 +1,8 @@
 # DateCake
 A natural-language date calculator.
 
+Currently a WIP.
+
 ## Usage
 
 Useful commands:
