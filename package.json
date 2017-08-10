@@ -2,14 +2,14 @@
   "name": "tom-react-skeleton",
   "version": "0.1.0",
   "description": "A simple, Node-Express + React+Redux all-in-one skeleton.",
-  "person": { 
-    "name" : "Tom Arrell",
-    "email" : "me@tomarrell.com",
-    "url" : "https://tomarrell.com"
+  "person": {
+    "name": "Tom Arrell",
+    "email": "me@tomarrell.com",
+    "url": "https://tomarrell.com"
   },
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/tomarrell/React-Express-Skeleton"
+    "type": "git",
+    "url": "https://github.com/tomarrell/React-Express-Skeleton"
   },
   "license": "MIT",
   "devDependencies": {
