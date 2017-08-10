@@ -11,5 +11,9 @@
     "type": "git",
     "url": "https://github.com/tomarrell/Date-Cake"
   },
-  "license": "MIT"
+  "main": "./src",
+  "license": "MIT",
+  "dev-dependencies": {
+    "mocha": "^3.5.0"
+  }
 }
