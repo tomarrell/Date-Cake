@@ -1,6 +1,6 @@
 const moment = require('moment');
 
-const { naturalSplit } = require('../split');
+const { monthRegex } = require('../constants/regex');
 const returnType = require('../constants/returnType');
 const { command, commandMap } = require('../constants/command');
 const { durationType, durationTypeMap } = require('../constants/durationType');
@@ -12,18 +12,20 @@ const checkForCommand = (token, phraseObject) => {
 }
 const checkForReturnType = (token, phraseObject) => {
 }
-const checkForDuration = (token, phraseObject, { splitPhrase, index }) => {
+const checkForDuration = (token, phraseObject, { spaceSplit, index }) => {
   const num = parseInt(token, 10);
   if (!num) return;
 
-  const nextToken = splitPhrase[index + 1];
+  const nextToken = spaceSplit[index + 1];
   const type = durationTypeMap[nextToken];
   if (type) {
+    spaceSplit.splice(index, index);
     phraseObject.commandParam[type] = num;
   }
 }
 const checkForDate = (token, phraseObject) => {
-  
+  const match = monthRegex.exec(token);
+  console.log(match);
 }
 
 const parser = (phrase) => {
@@ -35,12 +37,14 @@ const parser = (phrase) => {
     returnType: returnType.ISO,
   }
 
-  splitPhrase.forEach((item, index) => {
-    checkForCommand(item, parsedPhrase); 
-    checkForDuration(item, parsedPhrase, { splitPhrase, index });
+  spaceSplit.forEach((item, index) => {
+    checkForCommand(item, parsedPhrase);
+    checkForDuration(item, parsedPhrase, { spaceSplit, index });
+    checkForDate(item, parsedPhrase);
   });
 
-  console.log(parsedPhrase);
+  // console.log(spaceSplit);
+  // console.log(parsedPhrase);
   return parsedPhrase;
 };
 

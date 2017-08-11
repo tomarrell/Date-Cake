@@ -1,0 +1,6 @@
+const monthRegex = /jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:tember)?(?:t)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?/;
+
+module.exports = {
+  monthRegex: new RegExp(monthRegex, 'i'),
+};
+
