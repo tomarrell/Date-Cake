@@ -1,4 +1,6 @@
 const moment = require('moment');
+
+const { naturalSplit } = require('../split');
 const returnType = require('../constants/returnType');
 const { command, commandMap } = require('../constants/command');
 const { durationType, durationTypeMap } = require('../constants/durationType');
@@ -21,10 +23,11 @@ const checkForDuration = (token, phraseObject, { splitPhrase, index }) => {
   }
 }
 const checkForDate = (token, phraseObject) => {
+  
 }
 
 const parser = (phrase) => {
-  const splitPhrase = phrase.split(' ');
+  const spaceSplit = phrase.split(' ');
   const parsedPhrase = {
     baseDate: moment(),
     command: null,
