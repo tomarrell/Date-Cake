@@ -13,11 +13,14 @@
   },
   "main": "./src",
   "scripts": {
-    "test": "mocha ./src/**/*.test.js"
+    "test": "mocha"
   },
   "license": "MIT",
   "devDependencies": {
     "chai": "^4.1.1",
     "mocha": "^3.5.0"
+  },
+  "dependencies": {
+    "moment": "^2.18.1"
   }
 }
