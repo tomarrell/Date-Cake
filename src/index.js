@@ -1,10 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './components/App';
-import './components/index.css';
+const parser = require('./parser');
 
-ReactDOM.render(
-  <App />,
-  // eslint-disable-next-line
-  document.getElementById('root'),
-);
+const compute = (phrase) => {
+  const parsed = parser(phrase);
+};
+
+module.exports = {
+  compute,
+}
+
