@@ -29,6 +29,15 @@ describe('End to End', () => {
     );
   });
 
+  it('should add 1 year, 2 months, 20 days and 24 hours to text date', () => {
+    const underTest = 'add 1 year, 2 months, 20 days and 24 hours to March 2nd';
+    const march2 = moment.utc('2017-03-02T00:00:00.000Z');
+
+    expect(compute(underTest)).to.equal(
+      march2.add(20, 'days').add(24, 'hour').toISOString()
+    );
+  });
+
   it('should add 2 weeks to text date', () => {
     const underTest = 'add 2 weeks to March 2nd';
     const march2 = moment.utc('2017-03-02T00:00:00.000Z');
